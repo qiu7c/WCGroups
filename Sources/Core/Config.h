@@ -1,0 +1,40 @@
+#import <Foundation/Foundation.h>
+
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnifiedColorEnabledKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnifiedColorKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsEnabledKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsListKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSelectedKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsPendingKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsBurnAfterReadingKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsPinnedPersistentKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsGestureKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsContinuousKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsReverseKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsButtonHapticKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsHapticKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsGestureRatioKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSliderKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSliderSizeKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSliderRadiusKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSliderAnimationKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsSliderColorKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnderlineKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnderlineLengthKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnderlineThicknessKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnderlineOffsetKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsUnderlineColorKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsFontSizeKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsFontWeightKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsHideBadgesKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsHideRedDotsKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsNativeBadgeKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsBadgeXKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsBadgeYKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsBadgeColorKey;
+FOUNDATION_EXPORT NSString *const WCGroupsHomeGroupsBadgeTextColorKey;
+FOUNDATION_EXPORT NSString *const WCGroupsEnabledKey;
+void WCGroupsRegisterDefaults(void);
+BOOL WCGroupsEnabled(NSString *key);
+
+NSDictionary *WCGroupsDefaultSettings(void);

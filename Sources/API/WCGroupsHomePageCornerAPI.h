@@ -7,3 +7,5 @@ CGFloat WCGroupsHomePageCornerGap(void);
 NSInteger WCGroupsHomePageCornerMergedSection(UITableView *table);
 void WCGroupsHomePageCornerLayoutGroup(UIView *banner, CGFloat nativeHeight, CGFloat height, BOOL joined);
 void WCGroupsHomePageCornerAttach(UIViewController *controller);
+
+CGFloat WCGroupsHomePageScaleFactor(void);

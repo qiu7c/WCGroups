@@ -33,3 +33,8 @@ void WCGroupsHomePageCornerLayoutGroup(UIView *banner, CGFloat nativeHeight, CGF
 void WCGroupsHomePageCornerAttach(UIViewController *controller) {
     [(Class<WCHomeCornersIntegration>)NSClassFromString(@"WCRoundHomeIntegration") attach:controller];
 }
+
+CGFloat WCGroupsHomePageScaleFactor(void) {
+    Class<WCHomeCornersIntegration> corners = NSClassFromString(@"WCRoundHomeIntegration");
+    return [corners respondsToSelector:@selector(layoutScaleFactor)] ? [corners layoutScaleFactor] : 1;
+}

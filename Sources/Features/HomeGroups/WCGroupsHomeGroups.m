@@ -147,6 +147,8 @@ static NSSet<NSString *> *WCGroupNativeTopNames(void) {
     return names;
 }
 NSArray *WCGroupsHomeGroupsSection(id logic, NSInteger section) {
+    // Section 0 contains device/system banners, not chat sessions.
+    if (section!=1 && section!=2) return @[];
     NSString *account=WCGroupsCurrentUserWXID() ?: @"";
     NSMutableDictionary *sections=objc_getAssociatedObject(logic,&WCGroupSectionsKey);
     if ([objc_getAssociatedObject(logic,&WCGroupVersionKey) unsignedIntegerValue]!=WCGroupVersion
@@ -401,7 +403,7 @@ static void WCGroupPlaceSelection(UIView *view, CGRect frame, BOOL animated) {
 - (void)update {
     CGFloat width=self.table.bounds.size.width, nativeHeight=self.originalHeader.bounds.size.height;
     if (width<=0) return;
-    CGFloat scale=1.0, height=44*scale;
+    CGFloat scale=WCGroupsHomePageScaleFactor(), height=44*scale;
     BOOL rounded=WCGroupsHomePageCornerEnabled();
     BOOL joined=rounded && WCGroupsHomePageCornerMergedSection(self.table)!=NSNotFound;
     CGFloat gap=rounded && !joined?WCGroupsHomePageCornerGap():0;

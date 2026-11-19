@@ -103,7 +103,7 @@ static BOOL WCGroupsImportConfiguration(NSData *data) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
         cell.textLabel.text = @[@"版本", @"联系作者", @"项目地址"][path.row];
-        cell.detailTextLabel.text = @[@"1.0.0", @"cc", @"GitHub"][path.row];
+        cell.detailTextLabel.text = @[@"1.0.0+1", @"cc", @"GitHub"][path.row];
         cell.accessoryType = path.row ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
         if (!path.row) cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -124,7 +124,7 @@ static BOOL WCGroupsImportConfiguration(NSData *data) {
     }
     NSMutableDictionary *settings = [NSMutableDictionary dictionary];
     for (NSString *key in WCGroupsDefaultSettings()) settings[key] = [NSUserDefaults.standardUserDefaults objectForKey:key];
-    NSDictionary *document = @{@"plugin":@"WCGroups", @"format":@1, @"version":@"1.0.0", @"settings":settings};
+    NSDictionary *document = @{@"plugin":@"WCGroups", @"format":@1, @"version":@"1.0.0+1", @"settings":settings};
     NSData *data = [NSJSONSerialization dataWithJSONObject:document options:NSJSONWritingPrettyPrinted | NSJSONWritingSortedKeys error:nil];
     NSURL *url = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:@"WCGroups-config.json"]];
     if (!data || ![data writeToURL:url options:NSDataWritingAtomic error:nil]) {
@@ -153,7 +153,7 @@ UIViewController *WCGroupsCreatePluginSettingsController(void) {
 
 UIView *WCGroupsSettingsFooter(CGFloat width) {
     UILabel *footer = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 56)];
-    footer.text = @"WCGroups by cc\n1.0.0";
+    footer.text = @"WCGroups by cc\n1.0.0+1";
     footer.numberOfLines = 2;
     footer.textAlignment = NSTextAlignmentCenter;
     footer.font = [UIFont systemFontOfSize:12];

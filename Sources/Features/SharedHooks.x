@@ -23,8 +23,11 @@
 
 %hook MMDarkModeConfigUtil
 + (void)updateCurrentIsDarkMode:(BOOL)dark {
+    static BOOL hasMode, lastMode;
+    BOOL changed=!hasMode || lastMode!=dark;
+    hasMode=YES;lastMode=dark;
     %orig(dark);
-    WCGroupsHomeGroupsRefreshAppearance();
+    if (changed) WCGroupsHomeGroupsRefreshAppearance();
 }
 %end
 

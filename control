@@ -1,6 +1,6 @@
 Package: com.qiu7c.wcgroups
 Name: WCGroups
-Version: 1.0.0
+Version: 1.0.0+1
 Architecture: iphoneos-arm
 Depends: mobilesubstrate
 Description: Organize WeChat conversations with custom homepage groups and unread badges.

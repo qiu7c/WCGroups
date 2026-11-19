@@ -18,7 +18,7 @@ void WCGroupsRegisterEntry(void) {
     id manager = ((id (*)(id, SEL))objc_msgSend)(managerClass, shared);
     SEL registerSelector = NSSelectorFromString(@"registerControllerWithTitle:version:controller:");
     if (![manager respondsToSelector:registerSelector]) return;
-    ((void (*)(id, SEL, id, id, id))objc_msgSend)(manager, registerSelector, @"微信分组", @"1.0.0", @"WCGroupsLocalHomeGroupsSettings");
+    ((void (*)(id, SEL, id, id, id))objc_msgSend)(manager, registerSelector, @"微信分组", @"1.0.0+1", @"WCGroupsLocalHomeGroupsSettings");
     WCGroupsEntryRegistered = YES;
 }
 

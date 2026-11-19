@@ -48,7 +48,7 @@
     return result;
 }
 - (long long)getSessionCountForSection:(long long)section {
-    if (WCGroupsHomeGroupsNative() || !WCGroupsHomeGroupsEnabled()) {
+    if ((section!=1 && section!=2) || WCGroupsHomeGroupsNative() || !WCGroupsHomeGroupsEnabled()) {
         return %orig(section);
     }
     return (long long)WCGroupsHomeGroupsSection(self, section).count;

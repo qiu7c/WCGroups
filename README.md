@@ -15,4 +15,4 @@
 
 支持 JSON 配置导入与导出，设置界面采用圆角卡片和分组折叠。
 
-版本 1.0.0，作者 cc。 [项目地址](https://github.com/qiu7c/WCGroups) · [联系作者](https://qm.qq.com/q/ijROto4Oqc)
+版本 1.0.0+1，作者 cc。 [项目地址](https://github.com/qiu7c/WCGroups) · [联系作者](https://qm.qq.com/q/ijROto4Oqc)
